@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+	<style>
+		#output{
+			text-align:center;
+			color:#ff07d3;
+			font-size:20px;
+		}
+	</style>
+</head>
+<body>
+	<span id="output"></span>
+<script>
+	
+	let output = document.getElementById("output")
+        let incr=0;
+        function add(){
+            incr++;
+            let val=document.createElement("p");
+            output.appendChild(val);
+            val.innerHTML="Welcome to All!!!";
+        }
+
+        let stop=setInterval(()=>{
+            if (incr==5){
+                clearInterval(stop);
+            }
+            else{
+                add()
+            }
+        },3000)
+	
+	
+</script>
+</body>
+</html>
